@@ -164,6 +164,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529011960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6319625410823743473, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
+  m_PrefabInstance: {fileID: 2115643073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7760043eea2cd452ba7117f2c97e0038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &661683029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -602,6 +613,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c066a527a5039f478fd4b11b3b82540, type: 3}
+--- !u!114 &1455490548 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9196987336573309532, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
+  m_PrefabInstance: {fileID: 2115643073}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978224023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8861555758513075961, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
@@ -615,6 +637,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 259267083496140413, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
+      propertyPath: demoMapMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 259267083496140413, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
       propertyPath: scrollPos.x
       value: -25548.225
@@ -727,6 +753,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 971310267887604647, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
+      propertyPath: mapManager
+      value: 
+      objectReference: {fileID: 1455490548}
+    - target: {fileID: 971310267887604647, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
+      propertyPath: _playerMapMovement
+      value: 
+      objectReference: {fileID: 529011960}
     - target: {fileID: 1012125402948472046, guid: 4e5ad4b6faa38e14fbd27f0bbe609644, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
