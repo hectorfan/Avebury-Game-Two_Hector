@@ -538,14 +538,42 @@
 
             // Whilst we have a list of location info this is not the actual reference to the SO
             // We need to search for this and use the info on this object not the reference in the list
-            var infoObject = Resources.FindObjectsOfTypeAll<LUTELocationInfo>().FirstOrDefault(x => x.infoID == locationData.infoID);
+            //var infoObject = Resources.FindObjectsOfTypeAll<LUTELocationInfo>().FirstOrDefault(x => x.infoID == locationData.infoID);
+
+            var locationInfo = engine.GetComponents<LocationVariable>().FirstOrDefault(x => x.Value.infoID == locationData.infoID);
+            LUTELocationInfo info = null;
+
+            if (locationInfo != null)
+            {
+                info = locationInfo.Value;
+            }
 
             if (spawnedObject == null) return;
 
-            UpdateMarkerPosition(spawnedObject, infoObject.LatLongString());
+            UpdateMarkerSprite(spawnedObject, info);
+            UpdateMarkerPosition(spawnedObject, info.LatLongString());
             UpdateMarkerScale(spawnedObject);
-            UpdateMarkerBillboard(spawnedObject, infoObject);
+            UpdateMarkerBillboard(spawnedObject, info);
             UpdateRadiusCircle(index);
+        }
+
+        private void UpdateMarkerSprite(LocationMarker spawnedObject, LUTELocationInfo info)
+        {
+            switch (info._LocationStatus)
+            {
+                case LUTELocationInfo.LocationStatus.Unvisited:
+                    spawnedObject.SetMarkerSprite(info.Sprite);
+                    spawnedObject.SetRadiusColour(info.defaultRadiusColour);
+                    break;
+                case LUTELocationInfo.LocationStatus.Visited:
+                    spawnedObject.SetMarkerSprite(info.InProgressSprite);
+                    spawnedObject.SetRadiusColour(info.visitedRadiusColour);
+                    break;
+                case LUTELocationInfo.LocationStatus.Completed:
+                    spawnedObject.SetMarkerSprite(info.CompletedSprite);
+                    spawnedObject.SetRadiusColour(info.completedRadiusColour);
+                    break;
+            }
         }
 
         private void UpdateMarkerPosition(LocationMarker spawnedObject, Vector2d location)
