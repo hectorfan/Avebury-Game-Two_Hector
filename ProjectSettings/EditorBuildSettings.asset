@@ -24,6 +24,8 @@ EditorBuildSettings:
     path: Assets/LUTE_Starter Scenes/Scenes/Games/AR/XR_DragPuzzle_Example.unity
     guid: be433b044efb1e34d98e4f2be918d26d
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 556fd201d832b0940a13cf67aee5ae07, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: a3b44f079399f1e40bf8b146f79bb5bc, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 4329e4e5071ac414ca4e4ea6d2bb52a4, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 1dd6fae63a16bb143b3efa2884694bc2, type: 2}
   m_UseUCBPForAssetBundles: 0
